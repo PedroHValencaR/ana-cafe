@@ -59,6 +59,7 @@ export async function generateMetadata({
       type: "article",
       title: post.title,
       description: post.excerpt,
+      url: `/post/${post.slug}`,
       publishedTime: post.publishedAt,
       authors: post.author?.name ? [post.author.name] : undefined,
       images: image

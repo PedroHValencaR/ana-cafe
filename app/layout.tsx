@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Karla } from "next/font/google";
 
-import { siteUrl } from "@/lib/site";
+import { siteDescription, siteName, siteUrl, socialImage } from "@/lib/site";
 
 import "./globals.css";
 
@@ -25,30 +25,20 @@ export const metadata: Metadata = {
     default: "Ana café — A slow living journal",
     template: "%s · Ana café",
   },
-  description:
-    "A cozy corner of the internet for coffee, seasonal recipes, and the art of taking your time.",
+  description: siteDescription,
   openGraph: {
     type: "website",
     locale: "en_US",
-    siteName: "Ana café",
+    siteName,
     title: "Ana café — A slow living journal",
-    description:
-      "A cozy corner of the internet for coffee, seasonal recipes, and the art of taking your time.",
-    images: [
-      {
-        url: "/about-coffee.jpg",
-        width: 1200,
-        height: 800,
-        alt: "A freshly brewed cup of coffee on a wooden café table",
-      },
-    ],
+    description: siteDescription,
+    images: [socialImage],
   },
   twitter: {
     card: "summary_large_image",
     title: "Ana café — A slow living journal",
-    description:
-      "Coffee, seasonal recipes, and the art of taking your time.",
-    images: ["/about-coffee.jpg"],
+    description: "Coffee, seasonal recipes, and the art of taking your time.",
+    images: [socialImage.url],
   },
 };
 
